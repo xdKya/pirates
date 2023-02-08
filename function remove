@@ -1,0 +1,18 @@
+ remove(index) {
+   setTimeout(() => {
+      Matter.World.remove(world, navios[index].body);
+      navios.splice(index, 1);
+    }, 2000);
+  }
+  
+  
+  
+  
+   remove(index) {
+    Matter.Body.setVelocity(this.body, { x: 0, y: 0 });
+
+    setTimeout(() => {
+      Matter.World.remove(world, this.body);
+      delete balls[index];
+    }, 1000);
+  }
